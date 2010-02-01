@@ -1,0 +1,14 @@
+I2C RGB LED driver in an ATTiny25
+
+By Andrew Dodd
+atd7 at cornell dot edu
+
+Requires avr-gcc and avr-libc
+
+Control the LED's color by sending three bytes to the driver's I2C address, one each of
+Red, Green, Blue color.
+
+This code is currently configured to drive a common anode LED.  It can be recompiled to support common cathode LEDs by changing a #define
+
+The I2C address defaults to 0x32 unless the first entry in the EEPROM is a valid I2C address, in which case that address is used for the EEPROM.
+
